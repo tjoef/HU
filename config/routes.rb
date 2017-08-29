@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   get '/about' => 'home#about'
 
-  post '/questions' => root
 
 
 
