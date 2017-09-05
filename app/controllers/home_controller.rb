@@ -3,12 +3,12 @@ class HomeController < ApplicationController
   def index
   end
 
-  def home
-  end
-
   def about
   end
 
+  def temp
+    redirect_to root_path
+  end
 
   end
 

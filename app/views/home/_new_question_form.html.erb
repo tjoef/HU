@@ -2,34 +2,32 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
+        <h5 class="modal-title">New Questions</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+        <%=form_for :question,url: '/questions',html: {class:'form-horizontal'} do %>
       <div class="modal-body">
-        <div class="container">
-          <form>
             <div class="form-group row">
               <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" required>
               </div>
             </div>
             <div class="form-group row">
               <label for="inputQuestion" class="col-sm-2 col-form-label">Password</label>
               <div class="col-sm-10">
-                <textarea class="form-control" id="inputQuestion" placeholder="What would you like to know?"
+                <textarea name="question_body" class="form-control" id="inputQuestion" placeholder="What would you like to know?"
                           required></textarea>
               </div>
             </div>
-          </form>
-        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </div>
+          <% end %>
     </div>
   </div>
 </div>

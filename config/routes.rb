@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   get '/about' => 'home#about'
 
+  post '/questions' => 'home#temp'
 
+  get '/questions/:id' => 'home#question'
 
 
   # The priority is based upon order of creation:
